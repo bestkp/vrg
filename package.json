@@ -4,8 +4,11 @@
   "description": "a cli for react or vue",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "vrg": "bin/vrg"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vrg": "bin/vrg",
+    "vrg-init": "bin/vrg-init"
   },
   "repository": {
     "type": "git",

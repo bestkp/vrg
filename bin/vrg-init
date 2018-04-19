@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+const program = require('commander')
+const chalk = require('chalk')
+const log = require('../src/log')
+
+program.usage('<template-name> <project-name>')
+
+program.on('--help', function() {
+  log.log();
+  log.log('   Example:');
+  log.gray('   vrg init vue my-vue');
+})
+
+function help () {
+  program.parse(process.argv);
+  if (program.args.length < 1) {
+      return program.help();
+  }
+}
+
+help();

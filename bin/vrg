@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-const program = require('commander')
-const package = require('../package.json') 
+let pkg = require('../package.json');
 
-program.version(package.version)
-.usage('<command> [options]')
-.command('init', 'generate a new project from a template')
-.parse(process.argv)
+require('commander')
+  .version(pkg.version)
+  .usage('<command> [options]')
+  .command('init', 'generate a new project from a template')
+  .command('token', 'set auth token to get a higher rate limit of api requests')
+  .parse(process.argv)
 
-if(!program.args.length){ 
-  program.help() 
-} 
